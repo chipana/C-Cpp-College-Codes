@@ -1,0 +1,30 @@
+# Project: MQA
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Main.o $(RES)
+LINKOBJ  = Main.o $(RES)
+LIBS =  -L"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/lib"  
+INCS =  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/include" 
+CXXINCS =  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/include/c++/3.4.2/backward"  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/include/c++/3.4.2/mingw32"  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/include/c++/3.4.2"  -I"D:/Program Files (x86)/Dev-CppPortable/App/devcpp/include" 
+BIN  = MQA.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before MQA.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "MQA.exe" $(LIBS)
+
+Main.o: Main.c
+	$(CC) -c Main.c -o Main.o $(CFLAGS)

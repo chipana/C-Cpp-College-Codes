@@ -1,0 +1,8 @@
+1 - compilar : gcc servidor.c -o servidor -pthread
+               gcc cliente.c -o cliente -pthread
+
+2 - executar o servidor em um terminal : ./servidor
+
+3 - executar o cliente em outro terminal passando o endereço do servidor como argumento: ./cliente 127.0.0.1
+
+Eis um msn :D
